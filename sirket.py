@@ -91,7 +91,7 @@ class Sirket():
         for calisan in calisanlar:
             maaslar.append(int(calisan.split("-")[-1]))
         if hesap == "y":
-            print("BU AY VERİELECEK TOPLAM MAAŞ: {}".format(sum(maaslar) * 12))
+            print("BU YIL VERİELECEK TOPLAM MAAŞ: {}".format(sum(maaslar) * 12))
         else:
             print("BU AY VERİELECEK TOPLAM MAAŞ: {}".format(sum(maaslar)))
 
