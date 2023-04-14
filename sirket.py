@@ -23,6 +23,8 @@ class Sirket():
             self.gelirgir()
         if secim == 7:
             self.calisangor()
+        if secim == 8:
+            self.kapat()
 
     def menuecim(self):
         secim = int(input("""
@@ -34,9 +36,10 @@ class Sirket():
         5-Masraf Gir
         6-Gelir gir
         7-Çalışanları Göster
+        8-Uygulamayı Kapat
         Seçiminizi Giriniz:
         """.format(self.ad) ))
-        while secim <1 or secim >7:
+        while secim <1 or secim >8:
             secim = int(input("Lütfen 1-7 aralığında belirtilen değerlerden giriniz!"))
 
         return secim
@@ -155,6 +158,15 @@ class Sirket():
             gCalisanlar.append(" ".join(calisan[:-1].split("-")))
         for calisan in gCalisanlar:
             print(calisan)
+
+    def kapat(self):
+        nn = input("PRESS 'K' IF YOU WANT TO TURN OFF; ")
+        if nn == "K":
+            self.calisma = False
+            print("APPLICATION CLOSED")
+        else:
+            pass
+           
 sirket = Sirket("Anıl Mekatronik")
 
 
